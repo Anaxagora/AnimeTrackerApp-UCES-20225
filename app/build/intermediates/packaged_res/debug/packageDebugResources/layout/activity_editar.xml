@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Fondo -->
+    <ImageView
+        android:id="@+id/fondo"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/bg_manga4"
+        android:contentDescription="@null"
+        android:alpha="0.25" />
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:id="@+id/containerEditar"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Editar Serie"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            android:textColor="@color/crunchyroll_orange"
+            android:letterSpacing="0.05"
+            android:fontFamily="sans-serif-black"
+            android:shadowColor="#80000000"
+            android:shadowDx="2"
+            android:shadowDy="2"
+            android:shadowRadius="4" />
+
+        <!-- Campos (idénticos a MainActivity) -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/inputLayoutNombreEditar"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Nombre de la serie"
+            android:layout_marginTop="16dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etNombreEditar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/inputLayoutAnioEditar"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Año de estreno">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etAnioEditar"
+                android:inputType="number"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/inputLayoutComentarioEditar"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Comentarios">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etComentarioEditar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <Spinner
+            android:id="@+id/spinnerGeneroEditar"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/spinner_background"
+            android:padding="8dp"
+            android:spinnerMode="dropdown" />
+
+        <com.google.android.material.slider.Slider
+            android:id="@+id/sliderValoracionEditar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:valueFrom="1"
+            android:valueTo="7"
+            android:stepSize="1"
+            android:value="4" />
+
+        <Spinner
+            android:id="@+id/spinnerEstadoEditar"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/spinner_background"
+            android:padding="8dp"
+            android:spinnerMode="dropdown" />
+
+        <!-- Botón ACTUALIZAR -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnActualizar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="Actualizar"
+            app:cornerRadius="16dp"
+            style="@style/Widget.MaterialComponents.Button" />
+    </LinearLayout>
+</ScrollView>
+</FrameLayout>

@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cardSerie"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    app:cardCornerRadius="16dp"
+    app:cardElevation="8dp">
+
+    <LinearLayout
+        android:padding="16dp"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!-- Nombre y Año -->
+        <TextView
+            android:id="@+id/tvNombre"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Nombre del anime"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="@color/crunchyroll_orange"
+            android:letterSpacing="0.05"
+            android:fontFamily="sans-serif-black"
+            android:shadowColor="#80000000"
+            android:shadowDx="2"
+            android:shadowDy="2"
+            android:shadowRadius="4" />
+
+        <TextView
+            android:id="@+id/tvAnio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Año: 2023"
+            android:textSize="14sp" />
+
+        <!-- Género y Estado -->
+        <LinearLayout
+            android:layout_marginTop="4dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+        <!-- android:justifyContent="space-between"> -->
+
+       <TextView
+           android:id="@+id/tvGenero"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:text="Género"
+           android:padding="6dp"
+           android:textSize="12sp"
+           android:backgroundTint="@android:color/holo_orange_light"
+           android:textColor="@android:color/white"
+           android:background="@drawable/etiqueta_redonda" />
+
+       <TextView
+           android:id="@+id/tvEstado"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:text="Estado"
+           android:padding="6dp"
+           android:layout_marginStart="8dp"
+           android:textSize="12sp"
+           android:backgroundTint="@android:color/holo_blue_dark"
+           android:textColor="@android:color/white"
+           android:background="@drawable/etiqueta_redonda" />
+   </LinearLayout>
+
+   <!-- Comentario -->
+        <TextView
+            android:id="@+id/tvComentario"
+            android:layout_marginTop="8dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Comentario o reseña del anime..."
+            android:textSize="14sp" />
+
+        <!-- Valoración -->
+        <TextView
+            android:id="@+id/tvValoracion"
+            android:layout_marginTop="8dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Valoración: 5/7"
+            android:textStyle="italic"
+            android:textSize="14sp" />
+
+        <!-- Botones Editar / Eliminar -->
+        <LinearLayout
+            android:layout_marginTop="8dp"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/btnEditar"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Editar" />
+
+            <Button
+                android:id="@+id/btnEliminar"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Eliminar"
+                android:layout_marginStart="8dp" />
+        </LinearLayout>
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

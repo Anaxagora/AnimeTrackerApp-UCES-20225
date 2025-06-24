@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="crunchyroll_orange">#F47521</color>
+    <color name="white">#FFFFFFFF</color>
+    <string name="app_name">AnimeTrackerApp</string>
+    <style name="Base.Theme.AnimeTrackerApp" parent="Theme.Material3.DayNight.NoActionBar">
+        
+        
+        <item name="colorPrimary">@color/crunchyroll_orange</item>
+        <item name="colorPrimaryVariant">@color/crunchyroll_orange</item>
+        <item name="colorOnPrimary">@color/white</item>
+    </style>
+    <style name="Theme.AnimeTrackerApp" parent="Base.Theme.AnimeTrackerApp"/>
+</resources>
